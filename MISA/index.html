@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhúng css -->
+    <!-- Nhúng thư viện -->
+    <link rel="stylesheet" href="./content/font/fontawesome-5.15.1/css/all.css">
+    <!-- Nhúng các css sử dụng chung -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/common.css"> -->
+    <!-- Nhúng các css sử dụng riêng cho các trang -->
+</head>
+
+<body>
+    Welcome to MISA!
+    <!-- 1. Button -->
+    <div class="m-row">
+        <label for="" class="m-label">
+            1. Button
+        </label>
+        <div class="m-row">
+            <button class="m-btn">
+                Thêm mới nhân viên
+            </button>
+        </div>
+    </div>
+    <!-- 2. Button icon -->
+    <div class="m-row">
+        <label for="" class="m-label">
+            2. Button icon
+        </label>
+        <div class="m-row">
+            <button class="m-btn">
+                <div class="m-btn-icon"></div>
+                <div class="m-btn-text">Thêm mới nhân viên</div>
+            </button>
+        </div>
+    </div>
+    <div class="m-row">
+        <label for="" class="m-label">
+            2-5. Button icon
+        </label>
+        <div class="m-row m-row-2">
+            <button class="m-btn m-btn-1">
+                <div class="m-btn-icon-save"></div>
+                <div class="m-btn-text">Thêm mới nhân viên</div>
+            </button>
+            <button class="m-btn m-btn-2">
+                <div class="m-btn-icon-down"></div>
+            </button>
+        </div>
+    </div>
+    <!-- 3.COMBOBOX -->
+    <div class="m-row">
+        <label for="" class="m-label">
+            3.COMBOBOX
+        </label>
+        <select class="m-combobox" name="" id="">
+            <option value="">Nam</option>
+            <option value="">Nữ</option>
+            <option value="">Khác</option>
+        </select>
+    </div>
+    <!-- 5. Input Search -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">5. Input Search</label>
+        <input type="text" class="m-input m-input-search" name="" id="" placeholder="Tìm kiếm thông tin">
+    </div>
+    <div class="m-row">
+        <label for="m-row" class="m-label">5. Input Search Error</label>
+        <input type="text" class="m-input m-input-search m-input-error" name="" id="" placeholder="Tìm kiếm thông tin">
+    </div>
+    <!-- 6. Input Defalt -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">6. Input Defalt</label>
+        <input type="text" class="m-input" name="" id="" placeholder="hint text">
+    </div>
+    <!-- 7. Input Error -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">7. Input Error</label>
+        <br>
+        <br>
+
+        <div class="m-input-box">
+            <input type="text" class="m-input m-input-error" name="" id="" placeholder="hint text">
+            <div class="m-error-info">
+                Mật khẩu không được trùng với tài khoảng
+                <div class="m-arrow-bottom"></div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- 9. TOAST MESSENGER -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">9. TOAST MESSENGER</label>
+        <div class="m-toast-box">
+            <div class="m-toast-msg m-toast-error">
+                <div class="m-toast-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="m-toast-text">Thêm mới thành công</div>
+                <div class="m-toast-close "><i class="fas fa-times"></i></div>
+            </div>
+            <div class="m-toast-msg m-toast-info">
+                <div class="m-toast-icon"><i class="fas fa-info-circle"></i></div>
+                <div class="m-toast-text">Thêm mới thành công</div>
+                <div class="m-toast-close "><i class="fas fa-times"></i></div>
+            </div>
+            <div class="m-toast-msg m-toast-warning">
+                <div class="m-toast-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="m-toast-text">Thêm mới thành công</div>
+                <div class="m-toast-close "><i class="fas fa-times"></i></div>
+            </div>
+            <div class="m-toast-msg m-toast-success">
+                <div class="m-toast-icon"><i class="fas fa-check"></i></i>
+                </div>
+                <div class="m-toast-text">Thêm mới thành công</div>
+                <div class="m-toast-close "><i class="fas fa-times"></i></div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- 10. POP-UP CẢNH CÁO -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">10. POP-UP CẢNH CÁO</label>
+        <button id="btnShowPopup" class="m-btn">
+            Hiện thị Popup
+        </button>
+        <div id="dlgPopup" class="m-dialog-modal">
+            <div class="m-dialog">
+
+                <div class="m-dialog-header">
+                    <div class="m-dialog-title">
+                        Thông tin khách hàng
+                    </div>
+                    <div id="m-dialog-close" class="m-dialog-close"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="m-dialog-content">
+                    <div class="m-dialog-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="m-dialog-text">
+                        Bạn có chắc muốn xóa khách hàng
+                    </div>
+                </div>
+                <div class="m-dialog-footer">
+                    <button class="m-btn m-btn-nobg m-btn-footer">
+                            Hủy
+                        </button>
+                    <button class="m-btn m-btn-footer">
+                            Xóa
+                        </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 8. Table -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">8. Table</label>
+        <table class="m-table" border="1">
+            <thead>
+                <tr>
+                    <th class="text-align-left" style="width: 120px;">Mã nhân viên</th>
+                    <th class="text-align-left">Họ và tên</th>
+                    <th class="text-align-left" style="width: 80px;">Giới tính</th>
+                    <th class="text-align-center" style="width: 100px;">Ngày sinh</th>
+                    <th class="text-align-right" style="width: 150px;">Mức lương</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-align-left">NV001</td>
+                    <td class="text-align-left">Baka chan</td>
+                    <td class="text-align-left">Pan</td>
+                    <td class="text-align-center">10/11/2000</td>
+                    <td class="text-align-right">50.000.000</td>
+                </tr>
+                <tr>
+                    <td class="text-align-left">NV001</td>
+                    <td class="text-align-left">Kien Nguyen</td>
+                    <td class="text-align-left">BI</td>
+                    <td class="text-align-center">10/11/2000</td>
+                    <td class="text-align-right">5.000.000</td>
+                </tr>
+                <tr>
+                    <td class="text-align-left">NV001</td>
+                    <td class="text-align-left">Tran Cuong</td>
+                    <td class="text-align-left">NAM</td>
+                    <td class="text-align-center">10/11/2000</td>
+                    <td class="text-align-right">120.000.000</td>
+                </tr>
+                <tr>
+                    <td class="text-align-left">NV001</td>
+                    <td class="text-align-left">Baka chan</td>
+                    <td class="text-align-left">Pan</td>
+                    <td class="text-align-center">10/11/2000</td>
+                    <td class="text-align-right">50.000.000</td>
+                </tr>
+                <tr>
+                    <td class="text-align-left">NV001</td>
+                    <td class="text-align-left">Baka chan</td>
+                    <td class="text-align-left">Pan</td>
+                    <td class="text-align-center">10/11/2000</td>
+                    <td class="text-align-right">50.000.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 8. Table with Paging -->
+    <div class="m-row">
+        <label for="m-row" class="m-label" style="color: aqua">8. Table with Paging</label>
+        <div class="m-grid">
+            <table class="m-table" border="1">
+                <thead>
+                    <tr>
+                        <th class="text-align-left" style="width: 120px;">Mã nhân viên</th>
+                        <th class="text-align-left">Họ và tên</th>
+                        <th class="text-align-left" style="width: 80px;">Giới tính</th>
+                        <th class="text-align-center" style="width: 100px;">Ngày sinh</th>
+                        <th class="text-align-right" style="width: 150px;">Mức lương</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-align-left">NV001</td>
+                        <td class="text-align-left">Baka chan</td>
+                        <td class="text-align-left">Pan</td>
+                        <td class="text-align-center">10/11/2000</td>
+                        <td class="text-align-right">50.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-align-left">NV001</td>
+                        <td class="text-align-left">Kien Nguyen</td>
+                        <td class="text-align-left">BI</td>
+                        <td class="text-align-center">10/11/2000</td>
+                        <td class="text-align-right">5.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-align-left">NV001</td>
+                        <td class="text-align-left">Tran Cuong</td>
+                        <td class="text-align-left">NAM</td>
+                        <td class="text-align-center">10/11/2000</td>
+                        <td class="text-align-right">120.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-align-left">NV001</td>
+                        <td class="text-align-left">Baka chan</td>
+                        <td class="text-align-left">Pan</td>
+                        <td class="text-align-center">10/11/2000</td>
+                        <td class="text-align-right">50.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-align-left">NV001</td>
+                        <td class="text-align-left">Baka chan</td>
+                        <td class="text-align-left">Pan</td>
+                        <td class="text-align-center">10/11/2000</td>
+                        <td class="text-align-right">50.000.000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="m-paging">
+                <div class="m-paging-left">Hiện thị 1-10/100 nhân viên</div>
+                <div class="m-paging-center">
+                    <div class="m-paging-hover m-paging-first"></div>
+                    <div class="m-paging-hover m-paging-prev"></div>
+
+                    <div class="m-paging-number">
+                        <div class="m-paging-hover page-number page-number-1">1</div>
+                        <div class="m-paging-hover page-number">2</div>
+                        <div class="m-paging-hover page-number">3</div>
+                        <div class="m-paging-hover page-number">4</div>
+                        <div class="m-paging-hover page-number">5</div>
+
+                    </div>
+                    <div class="m-paging-hover m-paging-next"></div>
+                    <div class="m-paging-hover m-paging-last"></div>
+
+
+                </div>
+                <div class="m-paging-right">
+                    <select class="m-combobox" name="" id="">
+                        <option value="10">10 nhân viên / trang</option>
+                        <option value="50">50 nhân viên / trang</option>
+                        <option value="100">100 nhân viên / trang</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    document.getElementById('btnShowPopup').addEventListener('click', () => {
+        document.getElementById('dlgPopup').style.display = 'block';
+    })
+    document.getElementById('m-dialog-close').addEventListener('click', () => {
+        document.getElementById('dlgPopup').style.display = 'none';
+    })
+</script>
+
+</html>
