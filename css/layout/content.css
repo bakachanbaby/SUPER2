@@ -99,13 +99,10 @@
 
 .m-content-table {
     padding: 16px;
+    height: 332px;
+    overflow: scroll;
 }
 
-.m-content-table table {
-    border-right: 5px solid #bbbbbb;
-    /* border-bottom: 5px solid #bbbbbb; */
-}
-
-.m-content-table table tr {
-    border-bottom: 1px solid #616161;
+.m-content-table tbody tr {
+    height: 50px;
 }

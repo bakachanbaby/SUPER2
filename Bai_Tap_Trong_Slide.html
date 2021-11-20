@@ -4,10 +4,12 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<title>BÀI TẬP </title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="../content/font/fontawesome-5.15.1/css/all.css">
 <link rel="stylesheet" href="../css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -69,7 +71,7 @@
             </div>
             <div class="m-tittle-right">
                 <div class="m-row">
-                    <button class="m-btn">
+                    <button id="m-btn-add-ele" class="m-btn ">
                         <div class="m-btn-icon"></div>
                         <div class="m-btn-text">Thêm mới nhân viên</div>
                     </button>
@@ -115,14 +117,14 @@
 
             </div>
             <div class="m-content-search-right">
-                <i class="fas fa-sync-alt"></i>
+                <i id="btnRefresh" onclick="loadData()" class="fas fa-sync-alt"></i>
             </div>
         </div>
         <!-- CONTENT TABLE -->
         <div class="m-content-table">
             <div class="m-row">
                 <div class="m-grid">
-                    <table class="m-table" border="1">
+                    <table id="tbdlEmloyeesList" class="m-table" border="1">
                         <thead>
                             <tr>
                                 <th class="text-align-left" style="width: 100px;">Mã nhân viên</th>
@@ -134,116 +136,44 @@
                                 <th class="text-align-left" style="width: 130px;">Chức vụ</th>
                                 <th class="text-align-left" style="width: 120px;">Phòng ban</th>
                                 <th class="text-align-right" style="width: 100px;">Mức lương</th>
-                                <th class="text-align-left" style="width: 125px;">Tình trạng công việc</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="text-align-left">NV-532408</td>
-                                <td class="text-align-left">Hồ Văn Long</td>
-                                <td class="text-align-left">Khác</td>
-                                <td class="text-align-center">11/08/1978</td>
-                                <td class="text-align-center">0978324678</td>
-                                <td class="text-align-left">long354@gmail.com</td>
-                                <td class="text-align-left">Giám đốc</td>
-                                <td class="text-align-left">Phòng Nhân sự</td>
-                                <td class="text-align-right">17.000.000</td>
-                                <td class="text-align-left">Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td class="text-align-left">NV-311169</td>
-                                <td class="text-align-left">Hoàng Mỹ Quỳnh</td>
-                                <td class="text-align-left">Nam</td>
-                                <td class="text-align-center">07/04/1976</td>
-                                <td class="text-align-center">09245765325</td>
-                                <td class="text-align-left">tranprir989@gmail.com</td>
-                                <td class="text-align-left">Nhân viên Marketting</td>
-                                <td class="text-align-left">Phòng Marketting</td>
-                                <td class="text-align-right">29.132.345</td>
-                                <td class="text-align-left">Đã nghỉ việc</td>
-                            </tr>
-                            <tr>
-                                <td class="text-align-left">NV-894305</td>
-                                <td class="text-align-left">Nguyễn Khánh Bình</td>
-                                <td class="text-align-left">Nữ</td>
-                                <td class="text-align-center">11/08/1978</td>
-                                <td class="text-align-center">0927893483</td>
-                                <td class="text-align-left">bakachan@gmail.com</td>
-                                <td class="text-align-left">Thu ngân</td>
-                                <td class="text-align-left">Phòng Công nghệ</td>
-                                <td class="text-align-right">20.000.000</td>
-                                <td class="text-align-left">Đang làm việc</td>
-                            </tr>
-                            <tr>
-                                <td class="text-align-left">NV-532408</td>
-                                <td class="text-align-left">Hồ Văn Long</td>
-                                <td class="text-align-left">Khác</td>
-                                <td class="text-align-center">11/08/1978</td>
-                                <td class="text-align-center">0978324678</td>
-                                <td class="text-align-left">long354@gmail.com</td>
-                                <td class="text-align-left">Giám đốc</td>
-                                <td class="text-align-left">Phòng Nhân sự</td>
-                                <td class="text-align-right">17.000.000</td>
-                                <td class="text-align-left">Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td class="text-align-left">NV-532408</td>
-                                <td class="text-align-left">Hồ Văn Long</td>
-                                <td class="text-align-left">Khác</td>
-                                <td class="text-align-center">11/08/1978</td>
-                                <td class="text-align-center">0978324678</td>
-                                <td class="text-align-left">long354@gmail.com</td>
-                                <td class="text-align-left">Giám đốc</td>
-                                <td class="text-align-left">Phòng Nhân sự</td>
-                                <td class="text-align-right">17.000.000</td>
-                                <td class="text-align-left">Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td class="text-align-left">NV-532408</td>
-                                <td class="text-align-left">Hồ Văn Long</td>
-                                <td class="text-align-left">Khác</td>
-                                <td class="text-align-center">11/08/1978</td>
-                                <td class="text-align-center">0978324678</td>
-                                <td class="text-align-left">long354@gmail.com</td>
-                                <td class="text-align-left">Giám đốc</td>
-                                <td class="text-align-left">Phòng Nhân sự</td>
-                                <td class="text-align-right">17.000.000</td>
-                                <td class="text-align-left">Đang thử việc</td>
-                            </tr>
 
                         </tbody>
                     </table>
-                    <div class="m-paging">
-                        <div class="m-paging-left">Hiện thị 1-10/100 nhân viên</div>
-                        <div class="m-paging-center">
-                            <div class="m-paging-hover m-paging-first"></div>
-                            <div class="m-paging-hover m-paging-prev"></div>
-
-                            <div class="m-paging-number">
-                                <div class="m-paging-hover page-number page-number-1">1</div>
-                                <div class="m-paging-hover page-number">2</div>
-                                <div class="m-paging-hover page-number">3</div>
-                                <div class="m-paging-hover page-number">4</div>
-                                <div class="m-paging-hover page-number">5</div>
-
-                            </div>
-                            <div class="m-paging-hover m-paging-next"></div>
-                            <div class="m-paging-hover m-paging-last"></div>
-
-
-                        </div>
-                        <div class="m-paging-right">
-                            <select class="m-combobox" name="" id="">
-                                <option value="10">10 nhân viên / trang</option>
-                                <option value="50">50 nhân viên / trang</option>
-                                <option value="100">100 nhân viên / trang</option>
-                            </select>
-                        </div>
-
-                    </div>
                 </div>
 
             </div>
+        </div>
+
+        <div class="m-paging">
+            <div class="m-paging-left">Hiện thị 1-10/100 nhân viên</div>
+            <div class="m-paging-center">
+                <div class="m-paging-hover m-paging-first"></div>
+                <div class="m-paging-hover m-paging-prev"></div>
+
+                <div class="m-paging-number">
+                    <div class="m-paging-hover page-number page-number-1">1</div>
+                    <div class="m-paging-hover page-number">2</div>
+                    <div class="m-paging-hover page-number">3</div>
+                    <div class="m-paging-hover page-number">4</div>
+                    <div class="m-paging-hover page-number">5</div>
+
+                </div>
+                <div class="m-paging-hover m-paging-next"></div>
+                <div class="m-paging-hover m-paging-last"></div>
+
+
+            </div>
+            <div class="m-paging-right">
+                <select class="m-combobox" name="" id="">
+                    <option value="10">10 nhân viên / trang</option>
+                    <option value="50">50 nhân viên / trang</option>
+                    <option value="100">100 nhân viên / trang</option>
+                </select>
+            </div>
+
         </div>
     </div>
     <!-- POPUP -->
@@ -282,7 +212,7 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="text" class="m-input" name="" id="">
+                                                    <input type="text" class="m-input" name="" id="m-employeeCode-txt">
                                                 </div>
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-header">
@@ -290,7 +220,7 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="date" class="m-input" name="" id="">
+                                                    <input type="date" class="m-input" name="" id="m-employeeDateOfBirth-txt">
                                                 </div>
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-header">
@@ -314,7 +244,7 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="email" class="m-input" name="" id="">
+                                                    <input type="email" class="m-input" name="" id="m-employeeEmail-txt">
                                                 </div>
                                             </div>
                                         </div>
@@ -326,19 +256,20 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="text" class="m-input" name="" id="">
+                                                    <input type="text" class="m-input" name="" id="m-employeeFullName-txt">
                                                 </div>
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-header">
                                                 Giới tính
                                             </div>
-                                            <div class="m-d-c-r-g-i-c-box-input">
-                                                <div class="m-row">
-                                                    <select class="m-combobox" name="" id="">
-                                                        <option value="">Nam</option>
-                                                        <option value="">Nữ</option>
-                                                        <option value="">Khác</option>
-                                                    </select>
+                                            <div id="m-employeeGender-txt" class="mcombobox">
+                                                <input type="text" class="m-combobox m-combobox-input">
+                                                <button tabindex="-1" class="m-combobox-button">
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </button>
+                                                <div class="m-combobox-data">
+                                                    <div class="m-combobox-item" value="1">Nam</div>
+                                                    <div class="m-combobox-item" value="0">Nữ</div>
                                                 </div>
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-header">
@@ -354,7 +285,7 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="tel" class="m-input" name="" id="">
+                                                    <input type="tel" class="m-input" name="" id="m-employeePhone-txt">
                                                 </div>
                                             </div>
                                         </div>
@@ -375,13 +306,12 @@
                                             <div class="m-d-c-r-g-i-c-box-header">
                                                 Vị trí
                                             </div>
-                                            <div class="m-d-c-r-g-i-c-box-input">
-                                                <div class="m-row">
-                                                    <select class="m-combobox" name="" id="">
-                                                        <option value="">Giám đốc</option>
-                                                        <option value="">Thu ngân</option>
-                                                        <option value="">Nhân viên Marketting</option>
-                                                    </select>
+                                            <div id="m-employeePositionId-txt" class="mcombobox">
+                                                <input type="text" class="m-combobox m-combobox-input">
+                                                <button tabindex="-1" class="m-btn m-combobox-button">
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </button>
+                                                <div class="m-combobox-data">
                                                 </div>
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-header">
@@ -407,13 +337,12 @@
                                             <div class="m-d-c-r-g-i-c-box-header">
                                                 Phòng ban
                                             </div>
-                                            <div class="m-d-c-r-g-i-c-box-input">
-                                                <div class="m-row ">
-                                                    <select class="m-combobox" name="" id="">
-                                                        <option value="">Phòng nhân sự</option>
-                                                        <option value="">Phòng đào tạo</option>
-                                                        <option value="">Phòng công nghệ</option>
-                                                    </select>
+                                            <div id="m-employeeDepartmentId-txt" class="mcombobox">
+                                                <input type="text" class="m-combobox m-combobox-input">
+                                                <button tabindex="-1" class="m-btn m-combobox-button">
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </button>
+                                                <div class="m-combobox-data">
                                                 </div>
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-header">
@@ -421,19 +350,22 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="text" class="m-input" name="" id="">
+                                                    <input type="text" class="m-input" name="" id="m-employeeSalary-txt">
                                                 </div>
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-header">
                                                 Tình trạng công việc
                                             </div>
-                                            <div class="m-d-c-r-g-i-c-box-input">
-                                                <div class="m-row ">
-                                                    <select class="m-combobox" name="" id="">
-                                                        <option value="">Đang thử việc</option>
-                                                        <option value="">Đang làm việc</option>
-                                                        <option value="">Đã nghỉ việc</option>
-                                                    </select>
+                                            <div id="m-employeeStatus-txt" class="mcombobox">
+                                                <input type="text" class="m-combobox m-combobox-input">
+                                                <button tabindex="-1" class="m-btn m-combobox-button">
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </button>
+                                                <div class="m-combobox-data">
+                                                    <div class="m-combobox-item" value="1">Đang thử việc</div>
+                                                    <div class="m-combobox-item" value="0">Đang làm việc</div>
+                                                    <div class="m-combobox-item" value="0">Đã nghỉ việc</div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -444,8 +376,8 @@
 
                     </div>
                     <div class="m-dialog-footer">
-                        <button class="m-btn m-btn-nobg m-btn-footer">Hủy</button>
-                        <button class="m-btn m-btn-footer">
+                        <button id="m-d-f-close" class="m-btn m-btn-nobg m-btn-footer">Hủy</button>
+                        <button id="m-d-f-add" class="m-btn m-btn-footer">
                             <div class="m-btn-dialog-icon-save"><i class="fas fa-save"></i></div>
                             <div class="m-btn-text">Lưu</div>
                         </button>
@@ -456,11 +388,19 @@
         </div>
     </div>
 
+    <div class="m-loading">
+        <div class="m-loading-icon">
 
+        </div>
+    </div>
 
 
 
 </body>
-<script src="../js/app.js"></script>
+<script src="./js/btn.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/combobox.js"></script>
+
+
 
 </html>
